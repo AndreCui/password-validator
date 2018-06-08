@@ -15,6 +15,20 @@ public class Validator {
 
             number ++;
         }
+        // password needs to contain special character
+        if(password.matches(".*[! @ # $ % ^ & * ( ) _ + - = / . > < : ; ' { } | ? ,  ].*")){
+            number ++;
+        }
+
+        // password needs at least 1 digit
+        if (password.matches(".*[0-9].*")){
+            number ++;
+        }
+
+        // password can be uppercase or lowercase
+        if (password.matches(".*[a-z].*[A-Z].*")) {
+            number ++;
+        }
         return number;
     }
 
